@@ -1,0 +1,27 @@
+# Render Blueprint: https://render.com/docs/blueprint-spec
+# This app is a persistent Node HTTP server (no build step) — it must run as a
+# Web Service, not a Static Site. A Static Site never runs startCommand and
+# only serves a build output directory, which this project doesn't produce.
+#
+# To apply: in Render, delete any existing Static Site for this repo, then
+# use "New" -> "Blueprint" and connect this repo, or create a Web Service
+# manually with the settings below.
+
+services:
+  - type: web
+    name: kartvelian-knowledge-lab
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server/server.mjs
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: NEO4J_URI
+        sync: false
+      - key: NEO4J_USERNAME
+        value: neo4j
+      - key: NEO4J_PASSWORD
+        sync: false
+      - key: NEO4J_DATABASE
+        value: neo4j
