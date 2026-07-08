@@ -5,6 +5,8 @@
   "type": "module",
   "description": "Kartvelian research knowledge graph MVP: KartvelianKnowledgeLab data with provenance, temporal exploration, and grounded relationship paths.",
   "scripts": {
+    "build": "echo \"no build step\"",
+    "start": "node server/server.mjs",
     "mvp": "node scripts/ingest.mjs --dry-run && node server/server.mjs",
     "ingest:dry": "node scripts/ingest.mjs --dry-run",
     "ingest": "node --env-file=.env scripts/ingest.mjs --write",
