@@ -1,0 +1,22 @@
+{
+  "name": "@coglab/unified-graph",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Kartvelian research knowledge graph MVP: KartvelianKnowledgeLab data with provenance, temporal exploration, and grounded relationship paths.",
+  "scripts": {
+    "mvp": "node scripts/ingest.mjs --dry-run && node server/server.mjs",
+    "ingest:dry": "node scripts/ingest.mjs --dry-run",
+    "ingest": "node --env-file=.env scripts/ingest.mjs --write",
+    "link": "node scripts/link-entities.mjs",
+    "migrate:dry": "node --env-file=.env scripts/migrate-in-place.mjs",
+    "migrate": "node --env-file=.env scripts/migrate-in-place.mjs --write",
+    "validate": "node scripts/validate.mjs"
+  },
+  "dependencies": {
+    "neo4j-driver": "^5.28.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
