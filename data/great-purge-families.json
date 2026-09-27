@@ -1,0 +1,88 @@
+{
+  "title": "Families of the Great Purge",
+  "scope": "A small research index of family-centred records connected to the 1937–1938 Great Purge in Georgia.",
+  "updated": "2026-08-01",
+  "source": {
+    "name": "Public Archive / Soviet Past Research Laboratory",
+    "url": "https://archive.ge/en/about",
+    "rights": "Online-resolution materials may be used for non-commercial research and education with attribution. This pilot stores catalogue metadata and links only."
+  },
+  "families": [
+    {
+      "id": "varazashvili",
+      "family": "Varazashvili family",
+      "years": "1937–1990",
+      "places": ["Georgia", "USSR"],
+      "languages": ["Georgian", "Russian"],
+      "summary": "A family archive and oral-history collection preserving portraits and memories connected to imprisonment, exile, the Gulag, and later rehabilitation.",
+      "people": [{"name":"Vera Varazashvili","role":"contributor and oral-history narrator","status":"witness"}],
+      "evidence": {"photos":42,"documents":0,"oralHistories":1,"purgeTagged":4},
+      "themes": ["Great Purge", "Political exile", "Political prisoners", "Gulag", "Rehabilitation"],
+      "sourceUrl": "https://archive.ge/en/collection?id=4",
+      "sourceLabel": "Collection of Vera Varazashvili",
+      "note": "The archive catalogue identifies 42 photographs; the oral history is described at collection level."
+    },
+    {
+      "id": "gelashvili",
+      "family": "Gelashvili family",
+      "years": "1921–1953",
+      "places": ["Georgia", "USSR"],
+      "languages": ["Georgian"],
+      "summary": "A collection documenting political imprisonment, exile, resistance to Soviet rule, and the Great Purge through a family-held photographic record.",
+      "people": [{"name":"Nikoloz Gelashvili","role":"collection namesake","status":"documented person"}],
+      "evidence": {"photos":24,"documents":0,"oralHistories":0,"purgeTagged":9},
+      "themes": ["Great Purge", "Resistance", "Political exile", "Political prisoners", "Gulag"],
+      "sourceUrl": "https://archive.ge/en/collection?id=19",
+      "sourceLabel": "Collection of Nikoloz Gelashvili",
+      "note": "The catalogue supplies thematic counts but does not describe every individual relationship; kinship should be verified record by record."
+    },
+    {
+      "id": "jajanidze-herzfeld",
+      "family": "Jajanidze–Herzfeld family",
+      "years": "1937–1956",
+      "places": ["Tbilisi", "Moscow", "Berlin", "Saint Petersburg"],
+      "languages": ["Russian", "Georgian", "German"],
+      "summary": "Official family papers include the 1956 certificate overturning the 1937 sentence against Mikheil Germanovich Jajanidze for lack of a crime.",
+      "people": [
+        {"name":"Mikheil Germanovich Jajanidze","role":"sentenced in 1937; rehabilitated in 1956","status":"victim"},
+        {"name":"Maria Herzfeld","role":"collection namesake","status":"family archive"}
+      ],
+      "evidence": {"photos":0,"documents":9,"oralHistories":0,"purgeTagged":2},
+      "themes": ["Great Purge", "Rehabilitation", "Official records", "Soviet totalitarianism"],
+      "sourceUrl": "https://archive.ge/en/document/564",
+      "sourceLabel": "USSR Supreme Court Military Collegium certificate",
+      "note": "The family connection represented by the collection should be expanded only after checking its catalogue records."
+    },
+    {
+      "id": "kvitsaridze",
+      "family": "Kvitsaridze family",
+      "years": "1934–1937",
+      "places": ["Kutaisi", "Tbilisi", "Georgia"],
+      "languages": ["Georgian"],
+      "summary": "Isidore Kvitsaridze and his nephew Grigol were arrested during the escalation of Soviet repression; both were executed in 1937 after extrajudicial or political proceedings.",
+      "people": [
+        {"name":"Isidore Kvitsaridze","role":"publisher and public figure; executed in 1937","status":"victim"},
+        {"name":"Grigol (Gigla) Kvitsaridze","role":"nephew; university dean; executed in 1937","status":"victim"}
+      ],
+      "evidence": {"photos":0,"documents":0,"oralHistories":0,"purgeTagged":1},
+      "themes": ["Great Purge", "Execution", "Confiscation", "Education", "Publishing"],
+      "sourceUrl": "https://archive.ge/ka/biography/304",
+      "sourceLabel": "Biography of Isidore Kvitsaridze",
+      "note": "This biography is currently available in Georgian on Archive.ge."
+    },
+    {
+      "id": "kiguradze",
+      "family": "Kiguradze family",
+      "years": "1930–1940",
+      "places": ["Georgia"],
+      "languages": ["Georgian", "Russian"],
+      "summary": "A family-contributed group photograph catalogued by the Public Archive under Soviet totalitarianism and the Great Purge.",
+      "people": [{"name":"Nino Kiguradze","role":"collection contributor","status":"contributor"}],
+      "evidence": {"photos":1,"documents":0,"oralHistories":0,"purgeTagged":1},
+      "themes": ["Great Purge", "Family photograph", "Soviet totalitarianism"],
+      "sourceUrl": "https://archive.ge/en/photo/1337",
+      "sourceLabel": "Collection of Nino Kiguradze, photo 1337",
+      "note": "The photograph is linked, not reproduced; identification of depicted people requires further research."
+    }
+  ]
+}

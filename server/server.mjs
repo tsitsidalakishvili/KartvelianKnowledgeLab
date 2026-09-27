@@ -131,6 +131,17 @@ const server = http.createServer(async (req, res) => {
       res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
       return res.end(html);
     }
+    if (url.pathname === "/families" || url.pathname === "/families.html") {
+      const html = await readFile(path.join(ROOT, "app", "families.html"));
+      res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
+      return res.end(html);
+    }
+    if (url.pathname === "/api/great-purge-families") {
+      const records = JSON.parse(
+        await readFile(path.join(ROOT, "data", "great-purge-families.json"), "utf8")
+      );
+      return json(res, 200, records);
+    }
     if (url.pathname === "/api/graph") {
       return json(res, 200, await getGraph());
     }
