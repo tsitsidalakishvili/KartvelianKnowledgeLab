@@ -54,3 +54,12 @@ npm run ingest       # write/refresh Kartvelian graph records in Neo4j
 ## Regenerating the Kartvelian Snapshot
 
 `data/kartvelian-seed.mjs` is baked, not hand-edited. It was consolidated from the former KartvelianKnowledgeLab scripts via `scripts/consolidate-kartvelian.mjs`; that script is retained as provenance for the snapshot.
+## Vercel deployment
+
+`vercel.json` routes the pages and API through `api/index.mjs`, which shares the
+local server handler. The build validates and regenerates the bundled graph.
+Without database credentials, all graph features use this saved snapshot.
+To read live Aura data, configure `NEO4J_URI`, `NEO4J_USERNAME`, `NEO4J_PASSWORD`,
+and `NEO4J_DATABASE` as server-side Vercel environment variables and redeploy.
+Keep `.env` out of source control. For local Aura access, run
+`node --env-file=.env server/server.mjs`.

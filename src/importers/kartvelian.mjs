@@ -21,7 +21,7 @@ export function importKartvelian() {
     .map((r) => {
       // Forward every relationship property except the structural keys the
       // schema helpers derive themselves (type/from/to).
-      const { type, from, to, ...restProps } = r;
+      const { type, from, to, props: nestedProps = {}, ...restProps } = r;
       return makeRel({
         graphspace: GS,
         source: SOURCE,
@@ -29,6 +29,8 @@ export function importKartvelian() {
         from,
         to,
         props: {
+          // Seed relationships may wrap metadata in props; Neo4j needs flat properties.
+          ...nestedProps,
           ...restProps,
           // KKL's in-graphspace SAME_AS links are editorially curated.
           ...(type === "SAME_AS" ? { method: "manual", status: "confirmed" } : {}),

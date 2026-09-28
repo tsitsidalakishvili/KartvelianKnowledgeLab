@@ -1,4 +1,4 @@
-// Unified Graph MVP server — zero external dependencies.
+// Unified Graph MVP server â€” zero external dependencies.
 //
 //   npm run mvp        (rebuilds the merged snapshot, then serves the explorer)
 //   http://localhost:3020
@@ -123,7 +123,7 @@ function json(res, status, body) {
   res.end(JSON.stringify(body));
 }
 
-const server = http.createServer(async (req, res) => {
+export async function handler(req, res) {
   const url = new URL(req.url, `http://localhost:${PORT}`);
   try {
     if (url.pathname === "/" || url.pathname === "/index.html") {
@@ -163,7 +163,7 @@ const server = http.createServer(async (req, res) => {
       return json(res, 200, {
         from, to, paths,
         note: paths.length
-          ? "Every step carries graphspace/source provenance — grounded evidence only."
+          ? "Every step carries graphspace/source provenance â€” grounded evidence only."
           : "No path found in the merged graph.",
       });
     }
@@ -185,9 +185,12 @@ const server = http.createServer(async (req, res) => {
   } catch (e) {
     json(res, 500, { error: e.message });
   }
-});
+}
 
-server.listen(PORT, () => {
-  const mode = hasCredentials() ? "AuraDB" : "local snapshot";
-  console.log(`Kartvelian Graph MVP: http://localhost:${PORT} (data: ${mode})`);
-});
+// Importing the handler in Vercel must not open a listening socket.
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  http.createServer(handler).listen(PORT, () => {
+    const mode = hasCredentials() ? "AuraDB" : "local snapshot";
+    console.log(`Kartvelian Graph MVP: http://localhost:${PORT} (data: ${mode})`);
+  });
+}

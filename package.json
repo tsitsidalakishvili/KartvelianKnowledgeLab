@@ -13,7 +13,8 @@
     "link": "node scripts/link-entities.mjs",
     "migrate:dry": "node --env-file=.env scripts/migrate-in-place.mjs",
     "migrate": "node --env-file=.env scripts/migrate-in-place.mjs --write",
-    "validate": "node scripts/validate.mjs"
+    "validate": "node scripts/validate.mjs",
+    "test": "node --test"
   },
   "dependencies": {
     "neo4j-driver": "^5.28.0"
